@@ -1,0 +1,33 @@
+public virtual class Toy {
+    String ability;
+    Integer uses;
+
+    public virtual String GetAbility(){
+      return ability;
+    }
+
+    public void talk(){
+    	system.debug('Hello There!');
+    }
+}
+
+public class ActionFigure extends Toy{
+  String ability = 'Enrage';
+  
+  public ActionFigure(){
+    this('Jump');
+  }
+
+  public ActionFigure(String action){
+    this(action, 4);
+  }
+
+  public ActionFigure(String action, Integer numTimes){
+    this(action, numTimes);
+  }
+
+  public override String GetAbility(){
+    return this.ability;
+  }
+
+}
